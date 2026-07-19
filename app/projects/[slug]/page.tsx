@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowIcon, DotIcon } from "@/components/icons";
+import { MediaGallery } from "@/components/media-gallery";
 import { ProjectVisual } from "@/components/project-visual";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { getProject, projects } from "@/content/site";
+import { civicSignalMedia, getProject, projects } from "@/content/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -61,6 +62,17 @@ export default async function ProjectPage({ params }: Props) {
             <div><dt>Stack</dt><dd>{project.technologies.slice(0, 4).join(" · ")}</dd></div>
           </dl>
         </header>
+
+        {project.slug === "civicsignal" ? (
+          <section className="case-media-section page-shell" aria-labelledby="civicsignal-showcase-title">
+            <div className="case-section-label"><span>00</span> Product walkthrough</div>
+            <div className="case-media-heading">
+              <h2 id="civicsignal-showcase-title">CivicSignal in action.</h2>
+              <p>From public discovery to administrative review, these screens show how the product keeps safety, verification, privacy, and accountability visible across the experience.</p>
+            </div>
+            <MediaGallery items={civicSignalMedia} projectName={project.name} />
+          </section>
+        ) : null}
 
         <section className="case-section page-shell case-intro">
           <div className="case-section-label"><span>01</span> Overview</div>

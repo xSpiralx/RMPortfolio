@@ -1,5 +1,16 @@
 export type ProjectStatus = "In development" | "Planning" | "Archive";
 
+export type ProjectMedia = {
+  type: "image" | "video";
+  src: string;
+  title: string;
+  caption: string;
+  alt: string;
+  width: number;
+  height: number;
+  poster?: string;
+};
+
 export type Project = {
   slug: string;
   name: string;
@@ -231,6 +242,72 @@ export const gameProjects = [
   { name: "Project Hero", engine: "Unity", note: "Gameplay-system and prototype work. Media and exact contribution notes to add." },
   { name: "Project Nexus", engine: "Unity", note: "Earlier programming and systems-design work. Repository details to add." },
   { name: "Ripple", engine: "Godot / prototype", note: "Creative prototyping, iteration, and debugging evidence. Media to add." },
+];
+
+export const civicSignalMedia: ProjectMedia[] = [
+  {
+    type: "image",
+    src: "/media/projects/civicsignal/landing-page.png",
+    title: "Public landing page",
+    caption: "The public entry point communicates CivicSignal’s purpose, emergency limitations, privacy posture, and verification model before a person begins searching.",
+    alt: "CivicSignal landing page with community-resource search and an immediate-danger notice",
+    width: 1440,
+    height: 900,
+  },
+  {
+    type: "image",
+    src: "/media/projects/civicsignal/resource-directory.png",
+    title: "Source-aware resource directory",
+    caption: "Search and filtering keep source status, verification dates, and essential service information visible in the browsing flow.",
+    alt: "CivicSignal community resource directory with filters and verified resource cards",
+    width: 1440,
+    height: 900,
+  },
+  {
+    type: "image",
+    src: "/media/projects/civicsignal/resource-detail.png",
+    title: "Verified resource detail",
+    caption: "A detailed resource view separates emergency guidance, source verification, freshness, eligibility, and service requirements.",
+    alt: "CivicSignal accessible transportation resource detail showing verification and service information",
+    width: 1440,
+    height: 900,
+  },
+  {
+    type: "image",
+    src: "/media/projects/civicsignal/mobile-resource.png",
+    title: "Responsive mobile experience",
+    caption: "The resource experience remains readable and task-focused on small screens without hiding safety or source information.",
+    alt: "Mobile CivicSignal resource page for accessible transportation planning",
+    width: 390,
+    height: 844,
+  },
+  {
+    type: "image",
+    src: "/media/projects/civicsignal/correction-form.png",
+    title: "Privacy-aware correction form",
+    caption: "Community corrections are reviewed before publication, with clear warnings against submitting sensitive medical, legal, or identity information.",
+    alt: "CivicSignal community correction form with privacy guidance",
+    width: 1440,
+    height: 900,
+  },
+  {
+    type: "image",
+    src: "/media/projects/civicsignal/admin-dashboard.png",
+    title: "Administrative workflow",
+    caption: "The administrator workspace guides reviewers through review, re-verification, immutable revision, and publication steps.",
+    alt: "CivicSignal administrator dashboard with review and publishing workflow",
+    width: 1440,
+    height: 900,
+  },
+  {
+    type: "image",
+    src: "/media/projects/civicsignal/audit-history.png",
+    title: "Append-only audit history",
+    caption: "Governance actions are recorded as operational history while session tokens and reporter contact information remain excluded.",
+    alt: "CivicSignal audit history listing correction, sign-in, and administrator events",
+    width: 1440,
+    height: 900,
+  },
 ];
 
 export const skillGroups = [

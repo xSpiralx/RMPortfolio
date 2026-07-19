@@ -6,7 +6,7 @@ import { MediaGallery } from "@/components/media-gallery";
 import { ProjectVisual } from "@/components/project-visual";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { civicSignalMedia, getProject, projects } from "@/content/site";
+import { civicSignalMedia, getProject, projectNexusMedia, projects } from "@/content/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -32,6 +32,10 @@ export default async function ProjectPage({ params }: Props) {
   if (!project) notFound();
   const currentIndex = projects.findIndex((item) => item.slug === slug);
   const next = projects[(currentIndex + 1) % projects.length];
+  const projectMedia = project.slug === "civicsignal" ? civicSignalMedia : project.slug === "project-nexus" ? projectNexusMedia : null;
+  const mediaIntroduction = project.slug === "civicsignal"
+    ? "From public discovery to administrative review, these screens show how the product keeps safety, verification, privacy, and accountability visible across the experience."
+    : "Captured prototype footage and interface stills document the character, world, combat, reaction, and boss systems that made Project Nexus an ambitious systems-design exercise.";
 
   return (
     <>
@@ -63,14 +67,14 @@ export default async function ProjectPage({ params }: Props) {
           </dl>
         </header>
 
-        {project.slug === "civicsignal" ? (
-          <section className="case-media-section page-shell" aria-labelledby="civicsignal-showcase-title">
+        {projectMedia ? (
+          <section className="case-media-section page-shell" aria-labelledby={`${project.slug}-showcase-title`}>
             <div className="case-section-label"><span>00</span> Product walkthrough</div>
             <div className="case-media-heading">
-              <h2 id="civicsignal-showcase-title">CivicSignal in action.</h2>
-              <p>From public discovery to administrative review, these screens show how the product keeps safety, verification, privacy, and accountability visible across the experience.</p>
+              <h2 id={`${project.slug}-showcase-title`}>{project.name} in action.</h2>
+              <p>{mediaIntroduction}</p>
             </div>
-            <MediaGallery items={civicSignalMedia} projectName={project.name} />
+            <MediaGallery items={projectMedia} projectName={project.name} />
           </section>
         ) : null}
 

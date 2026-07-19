@@ -115,7 +115,7 @@ export default function Home() {
                     <ProjectVisual project={project} large />
                   </Link>
                   <div className="project-feature-copy">
-                    <div className="project-index">0{index + 1} / 05</div>
+                    <div className="project-index">0{index + 1} / {String(projects.length).padStart(2, "0")}</div>
                     <p className="eyebrow project-eyebrow">{project.eyebrow}</p>
                     <h3>{project.name}</h3>
                     <p className="project-value">{project.value}</p>

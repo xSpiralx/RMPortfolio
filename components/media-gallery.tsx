@@ -66,8 +66,8 @@ export function MediaGallery({ items, projectName }: { items: ProjectMedia[]; pr
           <figure className={`media-gallery-slide${item.height > item.width ? " media-gallery-slide-portrait" : ""}`} key={item.src}>
             <div className="media-gallery-frame">
               {item.type === "video" ? (
-                <video controls preload="metadata" poster={item.poster ? `${basePath}${item.poster}` : undefined}>
-                  <source src={`${basePath}${item.src}`} />
+                <video controls preload="metadata" playsInline aria-label={item.alt} poster={item.poster ? `${basePath}${item.poster}` : undefined}>
+                  <source src={`${basePath}${item.src}`} type="video/mp4" />
                   Your browser does not support embedded video.
                 </video>
               ) : (

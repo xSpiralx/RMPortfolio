@@ -27,7 +27,7 @@ test("renders the portfolio homepage with semantic navigation and content", asyn
 });
 
 test("renders the complete project index and every case-study route", async () => {
-  const routes = ["civicsignal", "spiralos", "sagespire", "engineering-flight-recorder", "locallead-ai"];
+  const routes = ["civicsignal", "spiralos", "sagespire", "project-nexus", "engineering-flight-recorder", "locallead-ai"];
   const indexResponse = await render("/projects");
   assert.equal(indexResponse.status, 200);
   const index = await indexResponse.text();
@@ -68,4 +68,3 @@ test("renders the résumé fallback without claiming a download exists", async (
   assert.match(html, /PDF download/);
   assert.match(html, /Exact details needed/);
 });
-

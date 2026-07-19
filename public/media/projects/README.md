@@ -28,3 +28,7 @@ To add a video clip later:
 1. Put a compressed `.webm` or `.mp4` and a poster image in `civicsignal/`.
 2. Add a new item to `civicSignalMedia` with `type: "video"`, its `src`, `poster`, title, caption, and descriptive alt text.
 3. Keep clips muted when autoplaying; the current gallery uses explicit controls and does not autoplay.
+
+## Project Nexus gallery
+
+Project Nexus uses the same reusable gallery and has its own `projectNexusMedia` array in `content/site.ts`. Web-ready `.m4v` clips and their poster images live in `project-nexus/`. The gallery preloads only metadata and requires the visitor to start playback, preventing large video downloads on initial page load.

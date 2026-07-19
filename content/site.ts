@@ -171,6 +171,39 @@ export const projects: Project[] = [
     future: ["Source-grounded AI tutor", "Personal study plans", "Collaborative learning rooms", "Educator-authored paths"],
   },
   {
+    slug: "project-nexus",
+    name: "Project Nexus",
+    eyebrow: "Game systems · Unity prototype",
+    value: "A systems-heavy pixel RPG prototype built around expressive character and combat choices.",
+    description:
+      "An earlier Unity game-development project exploring character creation, real-time world interaction, turn-based action controls, technique selection, reaction windows, clashes, counters, chat, and boss encounters.",
+    problem:
+      "Complex role-playing combat needs to expose many choices without losing the player in the interface. Project Nexus explored how character state, techniques, reactions, timing, and multiplayer-style communication could coexist in a readable pixel-world experience.",
+    role: "Gameplay programming, combat-system prototyping, interface implementation, debugging, and iterative systems design",
+    status: "Archive",
+    dates: "Dates to add",
+    accent: "crimson",
+    technologies: ["Unity", "C#", "Gameplay systems", "UI engineering", "Pixel-art workflows", "Prototyping"],
+    features: ["Layered character creator", "Action-panel combat controls", "Technique selection", "Reaction and counter windows", "Boss encounters", "In-world chat and role-play UI"],
+    goals: ["Support meaningful character customization", "Make layered combat choices readable", "Prototype reactive techniques, counters, and clashes", "Build a world interface that could support social play"],
+    contributions: ["Implemented and iterated on gameplay-facing systems", "Connected character state to combat and interface behavior", "Built UI flows for creation, actions, techniques, and reactions", "Debugged interactions across a growing prototype"],
+    architecture: ["Unity client", "Character + stat systems", "Technique and combat rules", "Reaction resolution", "World and interface layer"],
+    choices: [
+      { title: "Explicit action panel", detail: "Primary combat choices stay visible so players can reason about attacks, techniques, defense, movement, and turn completion." },
+      { title: "Reactive combat", detail: "Reaction windows, counters, and clashes give defenders meaningful decisions instead of treating every action as a one-sided animation." },
+      { title: "System-first prototyping", detail: "The project prioritized playable mechanics and interaction loops while presentation and content were still evolving." },
+    ],
+    challenges: [
+      { title: "State coordination", detail: "Combat, timing, character resources, world position, and interface state all need to remain synchronized as an encounter changes." },
+      { title: "Interface density", detail: "Deep RPG choices create large menus quickly, requiring hierarchy and progressive disclosure to keep the experience understandable." },
+    ],
+    lessons: ["Prototype complex rules with visible state", "UI is part of the gameplay system", "Reactive combat needs clear timing and outcome feedback", "Large projects benefit from smaller, testable system boundaries"],
+    security: ["Archived prototype; no production service or account-security claims", "Future online play would require authoritative validation", "Chat and user-generated content would require moderation boundaries"],
+    accessibility: ["Large, labeled action choices", "Text labels paired with visual controls", "Future work should add remapping, scalable UI, and non-timed reaction options"],
+    testing: ["Iterative playtesting during development", "Manual combat-state and UI-flow testing", "Future work should add automated rule and state-transition tests"],
+    future: ["Refactor combat rules into isolated testable modules", "Improve controller and keyboard navigation", "Add accessible timing options", "Document the system architecture and development timeline"],
+  },
+  {
     slug: "engineering-flight-recorder",
     name: "Engineering Flight Recorder",
     eyebrow: "Developer tools · AI context",
@@ -240,7 +273,6 @@ export const projects: Project[] = [
 
 export const gameProjects = [
   { name: "Project Hero", engine: "Unity", note: "Gameplay-system and prototype work. Media and exact contribution notes to add." },
-  { name: "Project Nexus", engine: "Unity", note: "Earlier programming and systems-design work. Repository details to add." },
   { name: "Ripple", engine: "Godot / prototype", note: "Creative prototyping, iteration, and debugging evidence. Media to add." },
 ];
 
@@ -307,6 +339,85 @@ export const civicSignalMedia: ProjectMedia[] = [
     alt: "CivicSignal audit history listing correction, sign-in, and administrator events",
     width: 1440,
     height: 900,
+  },
+];
+
+export const projectNexusMedia: ProjectMedia[] = [
+  {
+    type: "video",
+    src: "/media/projects/project-nexus/gameplay-01.m4v",
+    poster: "/media/projects/project-nexus/character-creator.jpeg",
+    title: "Prototype gameplay clip 01",
+    caption: "Captured development footage showing Project Nexus systems running together in the playable prototype.",
+    alt: "Project Nexus gameplay demonstration clip",
+    width: 1280,
+    height: 720,
+  },
+  {
+    type: "image",
+    src: "/media/projects/project-nexus/character-creator.jpeg",
+    title: "Layered character creator",
+    caption: "A category-driven creator for general traits, lineage, body, skin color, hair, face, markings, and other character options.",
+    alt: "Project Nexus pixel character creator showing customization categories and hair choices",
+    width: 1179,
+    height: 648,
+  },
+  {
+    type: "video",
+    src: "/media/projects/project-nexus/gameplay-02.m4v",
+    poster: "/media/projects/project-nexus/village-interface.jpeg",
+    title: "Prototype gameplay clip 02",
+    caption: "Playable footage documenting world interaction, interface behavior, and an evolving RPG gameplay loop.",
+    alt: "Project Nexus world and interface gameplay clip",
+    width: 1280,
+    height: 720,
+  },
+  {
+    type: "image",
+    src: "/media/projects/project-nexus/village-interface.jpeg",
+    title: "Village and action interface",
+    caption: "The world view brings together character status, time and season, hotkeys, action choices, technique access, and chat.",
+    alt: "Project Nexus pixel village with status display, action panel, characters, and chat interface",
+    width: 1179,
+    height: 649,
+  },
+  {
+    type: "video",
+    src: "/media/projects/project-nexus/gameplay-03.m4v",
+    poster: "/media/projects/project-nexus/reaction-system.jpeg",
+    title: "Prototype gameplay clip 03",
+    caption: "A longer captured session preserving the behavior of interconnected gameplay systems during development.",
+    alt: "Extended Project Nexus combat and gameplay systems clip",
+    width: 1280,
+    height: 720,
+  },
+  {
+    type: "image",
+    src: "/media/projects/project-nexus/reaction-system.jpeg",
+    title: "Reaction, dodge, and clash system",
+    caption: "Defenders can choose from speed-based dodges, basic defense, technique reactions, and clashes with visible success chances.",
+    alt: "Project Nexus reaction window with dodge, defend, technique reaction, and clash choices",
+    width: 1179,
+    height: 816,
+  },
+  {
+    type: "video",
+    src: "/media/projects/project-nexus/gameplay-04.m4v",
+    poster: "/media/projects/project-nexus/boss-encounter.jpeg",
+    title: "Prototype gameplay clip 04",
+    caption: "Additional prototype footage showing encounter flow, player controls, and the project’s iterative development state.",
+    alt: "Project Nexus encounter gameplay demonstration clip",
+    width: 1280,
+    height: 720,
+  },
+  {
+    type: "image",
+    src: "/media/projects/project-nexus/boss-encounter.jpeg",
+    title: "Boss encounter prototype",
+    caption: "A Fire Sage boss test combines action controls, health and resource state, encounter progress, and environmental presentation.",
+    alt: "Project Nexus Fire Sage boss encounter with combat controls and progress indicators",
+    width: 1179,
+    height: 763,
   },
 ];
 

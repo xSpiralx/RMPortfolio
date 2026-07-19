@@ -1,6 +1,6 @@
 # Robb Codes portfolio
 
-The professional portfolio for Robert McDermott (`robbcodes.com`). It is a content-driven Next.js/TypeScript site built with the vinext runtime for deployment through OpenAI Sites and compatible Cloudflare Workers output.
+The professional portfolio for Robert McDermott, published independently at `xspiralx.github.io/RMPortfolio/`. It is a content-driven Next.js/TypeScript site with a static GitHub Pages build and an optional vinext runtime.
 
 ## Local development
 
@@ -18,6 +18,7 @@ Open the local URL printed by the development server.
 ```bash
 npm run lint
 npm run build
+npm run build:pages
 npm test
 ```
 
@@ -61,7 +62,11 @@ Never expose a provider key in a `NEXT_PUBLIC_` variable. The hidden honeypot in
 
 ## Deployment
 
-### OpenAI Sites
+### GitHub Pages
+
+Run `npm run build:pages` to create the static `out/` directory. Publish that directory to the `gh-pages` branch of the separate `xSpiralx/RMPortfolio` repository. The resulting free public address is `https://xspiralx.github.io/RMPortfolio/`.
+
+### OpenAI Sites (optional legacy deployment)
 
 The included `.openai/hosting.json` and vinext Vite plugin prepare Cloudflare Worker-compatible output. Build with `npm run build`, then save and publish the verified source version through Sites.
 
@@ -69,15 +74,9 @@ The included `.openai/hosting.json` and vinext Vite plugin prepare Cloudflare Wo
 
 If moving away from vinext, connect the repository in Vercel, use the standard Next.js preset, set the production command to `npm run build`, and add server-only form variables in Project Settings → Environment Variables. Preview deployments are created for pull requests.
 
-## Custom domain (`robbcodes.com`)
+## Domain safety
 
-1. Add `robbcodes.com` in the selected hosting provider’s domain settings.
-2. Copy the exact A/AAAA/CNAME and verification records the provider gives you.
-3. Add those records at the DNS provider; do not delete unrelated mail or verification records.
-4. Add `www.robbcodes.com`, redirect it to the apex (or reverse that choice), and wait for TLS to become active.
-5. Verify the canonical URL, sitemap, résumé, form behavior, and social preview on the final hostname.
-
-DNS is not changed by this repository.
+This deployment does not use or modify `robbcodes.com`. No DNS changes are required.
 
 ## Environment variables
 
@@ -95,4 +94,3 @@ No environment variables are required while contact delivery is disabled. When a
 - Exact contribution details for game-development archive items
 
 No analytics or invasive tracking is installed.
-

@@ -31,7 +31,7 @@ export const profile = {
   name: "Robert McDermott",
   brand: "ROBB CODES",
   shortBrand: "RC",
-  domain: "robbcodes.com",
+  domain: "xspiralx.github.io/RMPortfolio",
   location: "Massachusetts",
   headline: "Building intelligent software with purpose.",
   role: "AI Engineer · Software Engineer · Full-Stack Developer",

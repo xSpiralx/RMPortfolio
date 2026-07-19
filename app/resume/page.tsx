@@ -8,7 +8,7 @@ import { profile, skillGroups } from "@/content/site";
 export const metadata: Metadata = {
   title: "Résumé — Robert McDermott",
   description: "Résumé area for Robert McDermott, aspiring AI and software engineer.",
-  alternates: { canonical: "https://robbcodes.com/resume" },
+  alternates: { canonical: "https://xspiralx.github.io/RMPortfolio/resume/" },
 };
 
 export default function ResumePage() {

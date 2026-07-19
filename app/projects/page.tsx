@@ -9,7 +9,7 @@ import { gameProjects, projects } from "@/content/site";
 export const metadata: Metadata = {
   title: "Projects — Robert McDermott",
   description: "AI, civic technology, backend, learning-system, and developer-tool projects by Robert McDermott.",
-  alternates: { canonical: "https://robbcodes.com/projects" },
+  alternates: { canonical: "https://xspiralx.github.io/RMPortfolio/projects/" },
 };
 
 export default function ProjectsPage() {
@@ -50,4 +50,3 @@ export default function ProjectsPage() {
     </>
   );
 }
-

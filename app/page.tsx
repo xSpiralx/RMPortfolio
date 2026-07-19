@@ -11,7 +11,7 @@ import { gameProjects, profile, projects, skillGroups, timeline } from "@/conten
 export const metadata: Metadata = {
   title: "Robert McDermott — AI & Software Engineer",
   description: "Portfolio of Robert McDermott, a Computer Science student building local-first AI, civic technology, developer tools, and dependable full-stack software.",
-  alternates: { canonical: "https://robbcodes.com" },
+  alternates: { canonical: "https://xspiralx.github.io/RMPortfolio/" },
 };
 
 const codeLines = [

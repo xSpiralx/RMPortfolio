@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${project.name} Case Study — Robert McDermott`,
     description: project.description,
-    alternates: { canonical: `https://robbcodes.com/projects/${project.slug}` },
-    openGraph: { title: `${project.name} — ${project.value}`, description: project.description, url: `https://robbcodes.com/projects/${project.slug}`, type: "article" },
+    alternates: { canonical: `https://xspiralx.github.io/RMPortfolio/projects/${project.slug}/` },
+    openGraph: { title: `${project.name} — ${project.value}`, description: project.description, url: `https://xspiralx.github.io/RMPortfolio/projects/${project.slug}/`, type: "article" },
   };
 }
 
@@ -120,4 +120,3 @@ export default async function ProjectPage({ params }: Props) {
     </>
   );
 }
-
